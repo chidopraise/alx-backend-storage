@@ -24,4 +24,16 @@ $ python3
 >>> pymongo.__version__
 '3.10.1'
 
-Author: ABraham Livinus.
+### Download A Zip Dump file And Unzip It
+guillaume@ubuntu:~/0x01$ curl -o dump.zip -s "https://s3.amazonaws.com/intranet-projects-files/holbertonschool-webstack/411/dump.zip"
+guillaume@ubuntu:~/0x01$ 
+guillaume@ubuntu:~/0x01$ unzip dump.zip
+Archive:  dump.zip
+   creating: dump/
+   creating: dump/logs/
+  inflating: dump/logs/nginx.metadata.json  
+  inflating: dump/logs/nginx.bson    
+guillaume@ubuntu:~/0x01$ 
+guillaume@ubuntu:~/0x01$ mongorestore dump
+
+Author: Abraham Livinus.
